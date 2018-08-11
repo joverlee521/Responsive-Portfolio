@@ -4,17 +4,17 @@ body {
     background-image: url("../images/subtle_white_feathers.png");
     margin: auto;
 }
-/* Header styles */
-header {
-    display: block;
-    background-color:#ffffff;
-    border-bottom: 3px solid #cccccc;
-}
-/* Header content div used to contain within 960px */
-.header-content {
+/*Content class used to contain within 960px */
+.content {
     width: 960px;
     margin: auto;
     overflow: hidden;
+}
+/* Header styles */
+header {
+    width: 100%;
+    background-color:#ffffff;
+    border-bottom: .2em solid #cccccc;
 }
 
 h1{
@@ -25,9 +25,9 @@ h1{
 header h1 {
     float: left;
     margin: 0;
-    padding: 32.5px;
-    height: 100%;
+    padding: 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
     color: #ffffff;
     background-color: #4aaaa5;
 }
@@ -68,13 +68,11 @@ li a:hover {
 }
 /* Styles for general main content on all three pages */
 .main-content {
-    width: 960px;
     margin: 40px auto;
     border: 1px solid #dddddd;
     border-radius: 25px;
     background: #ffffff;
     clear: both;
-    overflow: hidden;
 }
 
 .main-content h1 {
@@ -164,4 +162,76 @@ footer {
     width: 100%;
     border-top: 5px solid #4aaaa5;
     padding-top: 40px;
+}
+
+@media only screen and (max-width: 980px) {
+    .content {
+        margin: 0 4em;
+        width: 90%;
+    }
+    .main-content {
+        margin: 2.5em 0;
+        width: 60%;
+    }
+    .images {
+        margin-left: 2em;
+        margin-right: 0;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        margin: 0 1.5em;
+        width: 95%;
+    }
+    .main-content {
+        margin: 1.5em;
+        margin-top: 2em;
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+    .content {
+        margin: 0;
+        width: 100%;
+    }
+    header h1 {
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+    }
+    nav {
+        float: none;
+        width: 100%;
+        padding: 0 30%;
+    }
+    nav ul {
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+    }
+    .main-content{
+        box-sizing: border-box;
+        margin: 2em auto;
+        width: 90%;
+    }
+    .profile-pic {
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        height: auto;
+    }
+    .images {
+        width: 90%;
+    }
+
+    .images img {
+        width: 100%;
+        height: auto;
+    }
 }
